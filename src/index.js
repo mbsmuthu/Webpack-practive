@@ -1,1 +1,2 @@
-export {default} from './Webpack-practice.js';
+import addImage from "./addImage";
+addImage();

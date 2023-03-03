@@ -9,30 +9,26 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
 /* harmony export */ });
-/* harmony import */ var _Helloworld__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(2);
+/* harmony import */ var _css_flexbox_poster_png__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(2);
 
 
-const Changebgcolor = () => {
-    const i = (0,_Helloworld__WEBPACK_IMPORTED_MODULE_0__.Helloworld)() + 40;
-    return i;
-};
+const addImage = () => {
+  const img = document.createElement('img');
+  img.alt = 'Flexbox-poster';
+  img.src = _css_flexbox_poster_png__WEBPACK_IMPORTED_MODULE_0__;
+  img.width = 300;
+  const body = document.querySelector('body');
+  body.appendChild(img);
 
-/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (Changebgcolor);
+}
+
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (addImage);
 
 /***/ }),
 /* 2 */
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
 
-__webpack_require__.r(__webpack_exports__);
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "Helloworld": () => (/* binding */ Helloworld)
-/* harmony export */ });
-const Helloworld = () => {
-    let a=30;
-    let b=20;
-    let c=a+b;
-    return c;
-}
+module.exports = __webpack_require__.p + "09e727149fb8fb376268.png";
 
 /***/ })
 /******/ 	]);
@@ -90,16 +86,19 @@ const Helloworld = () => {
 /******/ 		};
 /******/ 	})();
 /******/ 	
+/******/ 	/* webpack/runtime/publicPath */
+/******/ 	(() => {
+/******/ 		__webpack_require__.p = "dist/";
+/******/ 	})();
+/******/ 	
 /************************************************************************/
 var __webpack_exports__ = {};
 // This entry need to be wrapped in an IIFE because it need to be isolated against other modules in the chunk.
 (() => {
 __webpack_require__.r(__webpack_exports__);
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "default": () => (/* reexport safe */ _Webpack_practice_js__WEBPACK_IMPORTED_MODULE_0__["default"])
-/* harmony export */ });
-/* harmony import */ var _Webpack_practice_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(1);
+/* harmony import */ var _addImage__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(1);
 
+(0,_addImage__WEBPACK_IMPORTED_MODULE_0__["default"])();
 })();
 
 /******/ })()
