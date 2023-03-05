@@ -1,4 +1,5 @@
 const path =  require("path"); //to define absolute path
+const TerserPlugin = require("terser-webpack-plugin"); //to minify bundle.js file
 
 module.exports = {
     entry: './src/index.js', // source file
@@ -23,7 +24,26 @@ module.exports = {
                 //     }
                 // }
                 //asset/source - webpack uses the content of the file and converts it into a JS string - mainly to use string variable
+            },
+            {
+                test: /\.css$/, // or /\.scss$/ and 'sass-loader' in the last for scss files
+                use: [
+                    'style-loader', 'css-loader' // order of array is important
+                ]
+            },
+            {
+                test: /\.js$/, // all js files except node_modules
+                exclude: /node_modules/, 
+                use: {
+                    loader: 'babel-loader', //to support features even in older browsers(ecma script)
+                    options: {
+                        presets: [ '@babel/env' ],
+                    }
+                }
             }
         ]
-    }
+    },
+    plugins: [
+        new TerserPlugin() //to minify project
+    ]
 };
