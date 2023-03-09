@@ -1,5 +1,5 @@
 import flexboxPoster from './css-flexbox-poster.png';
-import "./addImage.css"
+import "./addImage.css";
 
 const addImage = () => {
   const img = document.createElement('img');
@@ -10,13 +10,13 @@ const addImage = () => {
   body.appendChild(img);
 
     let btn = document.createElement('button');
-    btn.label = "Change bgcolor";
+    btn.innerHTML = "Change bgcolor";
     btn.classList.add("btn");
     btn.onclick = () => {
         body.style.backgroundColor = "red";
 }
 body.appendChild(btn);
-
+body.handleClick();
 }
 
 export default addImage;
